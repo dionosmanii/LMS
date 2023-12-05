@@ -8,13 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../Includes/Css/style.css">
+    <link rel="stylesheet" href="../../public/Css/style.css">
 </head>
 
 <body   style="height:100vh;">
 
     <!-- Header -->
-    <?php include '../Includes/Components/header.php'; ?>
+    <?php include '../layout/header.php'; ?>
 
     <!-- Registration Form -->
     <div class="container mt-5">
@@ -57,7 +57,7 @@
     <br><br>
 
     <!-- Footer -->
-    <?php include '../Includes/Components/footer.php'; ?>
+    <?php include '../layout/footer.php'; ?>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

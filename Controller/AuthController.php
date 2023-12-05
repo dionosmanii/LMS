@@ -1,8 +1,8 @@
 <?php
 // controllers/AuthController.php
 
-require_once '../Model/User.php';
-require_once '../Repository/UserRepository.php';
+require_once '../model/User.php';
+require_once '../repository/UserRepository.php';
 
 class AuthController
 {
@@ -59,10 +59,11 @@ class AuthController
 
                 // Save user information in the session
                 $_SESSION['user_id'] = $user['user_id'];
+                $_SESSION['firstname'] = $user['first_name'];
                 $_SESSION['user_role'] = $user['role'];
 
                 echo "Login successful!";
-                header('Location:../View/index.php');
+                header('Location:../View/Main/index.php');
                 // You may set user sessions or redirect to a user dashboard
             } else {
                 echo "Login failed. Please check your email and password.";

@@ -8,14 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../Includes/Css/style.css">
+    <link rel="stylesheet" href="../../public/Css/style.css">
 
 </head>
 
 <body>
 
     <!-- Header -->
-    <?php include '../Includes/Components/header.php'; ?>
+    <?php include '../layout/header.php'; ?>
 
 
     <!-- Hero Image -->
@@ -31,7 +31,7 @@
     <div class="container mt-4">
         <div class="row  bg-text-gray  ml-n5">
             <div class="col-md-6">
-                <img src="../Includes/img/company.jpg" alt="Company Image 1" class="img-fluid mb-3">
+                <img src="../../public/img/company.jpg" alt="Company Image 1" class="img-fluid mb-3">
             </div>
             <div class="col-md-6">
                 <h2>About Our Company</h2>
@@ -58,14 +58,14 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="../Includes/img/coding.jpg" alt="Programs Image" class="img-fluid">
+                <img src="../../public/img/coding.jpg" alt="Programs Image" class="img-fluid">
             </div>
         </div>
         <br><br><br>
         <!-- Facilities Section -->
         <div class="row mt-4 bg-text-gray ml-n5">
             <div class="col-md-6">
-                <img src="../Includes/img/facilities.jpg" alt="Facilities Image" class="img-fluid">
+                <img src="../../public/img/facilities.jpg" alt="Facilities Image" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <h2>Our Facilities</h2>
@@ -91,7 +91,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="../Includes/img/achievements.jpg" alt="Achievements Image" class="img-fluid">
+                <img src="../../public/img/achievements.jpg" alt="Achievements Image" class="img-fluid">
             </div>
         </div>
     </div><br><br>
@@ -104,19 +104,19 @@
         <div class="row">
             <!-- Teacher 1 -->
             <div class="col-md-4 teacher">
-                <img src="../Includes/img/pfp.jpg" alt="Teacher 1" class="img-fluid rounded-circle teacher-pfp">
+                <img src="../../public/img/pfp.jpg" alt="Teacher 1" class="img-fluid rounded-circle teacher-pfp">
                 <h4>Teacher 1</h4>
                 <p>Description of Teacher 1.</p>
             </div>
             <!-- Teacher 2 -->
             <div class="col-md-4 teacher">
-                <img src="../Includes/img/pfp.jpg" alt="Teacher 2" class="img-fluid rounded-circle teacher-pfp">
+                <img src="../../public/img/pfp.jpg" alt="Teacher 2" class="img-fluid rounded-circle teacher-pfp">
                 <h4>Teacher 2</h4>
                 <p>Description of Teacher 2.</p>
             </div>
             <!-- Teacher 3 -->
             <div class="col-md-4 teacher">
-                <img src="../Includes/img/pfp.jpg" alt="Teacher 3" class="img-fluid rounded-circle teacher-pfp">
+                <img src="../../public/img/pfp.jpg" alt="Teacher 3" class="img-fluid rounded-circle teacher-pfp">
                 <h4>Teacher 3</h4>
                 <p>Description of Teacher 3.</p>
             </div>
@@ -124,7 +124,7 @@
     </div>
 
     <!-- Footer -->
-    <?php include '../Includes/Components/footer.php'; ?>
+    <?php include '../layout/footer.php'; ?>
 
 
     <!-- Bootstrap JS and dependencies -->

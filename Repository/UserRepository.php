@@ -1,7 +1,7 @@
 <?php
 
-require_once '../Includes/config.php';
-require_once '../Model/User.php';
+require_once '../config/config.php';
+require_once '../model/User.php';
 
 class UserRepository
 {
@@ -106,5 +106,40 @@ class UserRepository
         }
     }
 
+    // ... (existing code)
+
+public function getUserById($userId)
+{
+    try {
+        // Fetch user data by user_id
+        $query = "SELECT * FROM users WHERE user_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $userId);
+        $stmt->execute();
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // If user data is found, create and return a User object
+        if ($userData) {
+            $user = new User(
+                $userData['first_name'],
+                $userData['last_name'],
+                $userData['username'],
+                $userData['email'],
+                ""
+            );
+
+
+            return $user;
+        }
+
+        return false;
+    } catch (PDOException $e) {
+        // Handle database errors
+        // Log or echo $e->getMessage() for debugging
+        return false;
+    }
+}
+
+// ... (existing code)
 
 }

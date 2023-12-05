@@ -18,7 +18,7 @@
             <!-- Contact Section -->
             <div class="col-md-3">
                 <h5>Contact</h5>
-                <p>Email: your.email@example.com</p>
+                <p>Email: Scholar@gmail.com</p>
                 <p>Phone: +1 234 567 890</p>
             </div>
 

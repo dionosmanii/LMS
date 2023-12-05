@@ -8,14 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../Includes/Css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 
 </head>
 
 <body style="min-height:100vh; display: flex; flex-direction: column;">
 
     <!-- Header -->
-    <?php include '../Includes/Components/header.php'; ?>
+    <?php include '../layout/header.php'; ?>
     <br><br><br>
 
 
@@ -27,7 +27,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="mb-4">Login</h2>
-                <form action="../Controller/AuthController.php" method="post">
+                <form action="../../Controller/AuthController.php" method="post">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required>
@@ -48,7 +48,7 @@
 
 
     <!-- Footer -->
-    <?php include '../Includes/Components/footer.php'; ?>
+    <?php include '../layout/footer.php'; ?>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
