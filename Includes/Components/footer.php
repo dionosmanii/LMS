@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" style="margin-top:auto">
     <div class="container mt-4">
         <div class="row mt-4">
             <!-- Copyright Section -->

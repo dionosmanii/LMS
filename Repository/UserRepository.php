@@ -77,4 +77,34 @@ class UserRepository
         // If count is greater than 0, username exists; otherwise, it does not
         return $count > 0;
     }
+
+    public function loginUser($email, $password)
+    {
+        try {
+            // Check if the email exists
+            if (!$this->isEmailExists($email)) {
+                return false;
+            }
+
+            // Fetch user data by email
+            $query = "SELECT * FROM users WHERE email = ?";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(1, $email);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Verify the password
+            if ($user && password_verify($password, $user['password'])) {
+                return $user;
+            }
+
+            return false;
+        } catch (PDOException $e) {
+            // Handle database errors
+            // Log or echo $e->getMessage() for debugging
+            return false;
+        }
+    }
+
+
 }

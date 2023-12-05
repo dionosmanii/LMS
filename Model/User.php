@@ -43,6 +43,11 @@ class User
         return $this->password;
     }
 
+    // method for verifying the password
+    public function verifyPassword($password)
+    {
+        return password_verify($password, $this->password);
+    }
 }
 
 
