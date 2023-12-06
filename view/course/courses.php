@@ -14,8 +14,8 @@
 
 <body>
     <?php
-        include_once '../repository/CourseRepository.php';
-        include_once '../repository/UserRepository.php';
+        include_once '../../repository/CourseRepository.php';
+        include_once '../../repository/UserRepository.php';
 		$courseRepository = new CourseRepository();
 	    $courses = $courseRepository->getAllCourses();
         $userRepository = new UserRepository();
@@ -48,7 +48,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $course->getTitle(); ?></h5>
                                     <p class="card-text"><?php echo $course->getDescription(); ?></p>
-                                    <p class="card-text"><small class="text-muted">Instructor: <?php echo $instructor->getFirstName() . " " . $instructor->getLastName(); ?></small></p>
+                                    <p class="card-text"><small class="text-muted">Instructor: <?php echo $instructor['first_name'] . " " . $instructor['last_name']; ?></small></p>
                                     <!-- Add more details or buttons as needed -->
                                 </div>
                             </div>

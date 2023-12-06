@@ -1,6 +1,6 @@
 <?php
-require_once '../config/config.php'; // Make sure to include your database configuration
-require_once '../model/Course.php';
+require_once __DIR__ . '/../config/config.php'; // Make sure to include your database configuration
+require_once __DIR__ . '/../model/Course.php';
 
 class CourseRepository
 {

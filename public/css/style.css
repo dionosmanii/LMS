@@ -68,3 +68,88 @@ header a {
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Dashboard */
+
+
+.dashboard-container {
+    max-width: 95%;
+    margin: auto;
+    padding: 20px;
+}
+
+.dashboard-profile-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+    min-height:600px;
+}
+.dashboard-profile-body{
+    min-height:600px;
+}
+.dashboard-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dashboard-profile-col{
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.dashboard-user-info {
+    padding: 20px;
+}
+
+.dashboard-date-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.dashboard-course-info {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    height: 600px;
+    overflow-y: auto;
+    padding: 20px;
+}
+.dashboard-info-col{
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.dashboard-logs-info {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    height: 600px;
+    padding: 20px;
+}
+.dashboard-logs-col{
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+}
+@media (max-width: 992px) {
+    .dashboard-logs-col {
+        width: 95%;
+    }
+    .dashboard-info-col {
+        width: 55%;
+    }
+    .dashboard-profile-col {
+        width: 35%;
+    }
+}
+
+@media (max-width: 870px) {
+    .dashboard-logs-col,
+    .dashboard-info-col,
+    .dashboard-profile-col {
+        width: 95%;
+    }
+}
