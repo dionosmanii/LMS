@@ -33,31 +33,34 @@
         <h2>All Courses</h2><br><br>
         <div class="row">
             <?php foreach ($courses as $course):
-            $id=$course->getInstructorId();
-            $instructor = $userRepository->getUserById($id);
+                $id = $course['instructor_id'];
+                $instructor = $userRepository->getUserById($id);
             ?>
                 <div class="col-md-12 mb-4">
                     <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <!-- Left side with image -->
-                                <img src="your_image_url.jpg" class="card-img" alt="Course Image" style="max-width: 150px; height: auto;">
-                            </div>
-                            <div class="col-md-8">
-                                <!-- Right side with title, description, and instructor -->
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $course->getTitle(); ?></h5>
-                                    <p class="card-text"><?php echo $course->getDescription(); ?></p>
-                                    <p class="card-text"><small class="text-muted">Instructor: <?php echo $instructor['first_name'] . " " . $instructor['last_name']; ?></small></p>
-                                    <!-- Add more details or buttons as needed -->
+                        <a href="single.php?course_id=<?php echo $course['course_id']; ?>" style="text-decoration: none; color: inherit;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <!-- Left side with image -->
+                                    <img src="../../public/uploads/course/<?php echo $course['course_image_url']?>" class="card-img" alt="Course Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <!-- Right side with title, description, and instructor -->
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $course['title']; ?></h5>
+                                        <p class="card-text"><?php echo $course['description']; ?></p>
+                                        <p class="card-text"><small class="text-muted">Instructor: <?php echo $instructor['first_name'] . " " . $instructor['last_name']; ?></small></p>
+                                        <!-- Add more details or buttons as needed -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
     </div>
+
 
 
     <!-- Footer -->
